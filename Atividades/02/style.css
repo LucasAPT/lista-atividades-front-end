@@ -1,0 +1,27 @@
+body {
+    margin: 15px;
+}
+
+.markgreen {
+    background-color: #009900;
+}
+
+.markred {
+    background-color: #dd0000;
+}
+
+.markblue {
+    background-color: #0000ff;
+}
+
+.markpurple {
+    background-color: #f137e8;
+}
+
+.imgCovid {
+    margin: 10px 100px 10px 100px;
+}
+
+.p1 {
+    font-size: 12px;
+}

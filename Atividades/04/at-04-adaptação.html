@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!--INDICA AO NAVEGADOR QUE ESTAMOS UTILIZANDO O HTML E SEUS RECURSOS-->
+
+<html>
+<!--HEAD É A CABEÇA DO CÓDIDO // ONDE FICAM AS FUNÇÕES E CONFIGURAÇÕES DO HTML-->
+
+<head>
+    <!--Esta tag serve para adaptar o site // no content está a configuração-->
+    <meta id="viewport" name="viewport" content="width=device-width"/>
+    <!-- Meta é uma tag // charset é um atributo // utf é o tipo do teclado/idioma utilizado -->
+    <meta charset="UTF-8" />
+    <title>Adaptação</title>
+    <!--COMANDO QUE CHAMA O CSS EXTERNO PARA ESTE HTML-->
+    <link rel="stylesheet" href="style.css" />
+
+</head>
+
+<!--BODY É O CORPO DO HTML-->
+<body>
+
+    <picture>
+        <!-- ALTURA MÍNIMA DE 600 - BANDEIRA -->
+        <source media="(min-width:600px)" srcset="imagens/bandeira.png"/>
+        <!-- ALTURA MÁXIMA DE 600 - ESCUDO -->
+        <source media="(max-width:600px)" srcset="imagens/escudo.png"/>  
+
+        <!-- APARENTEMENTE PRECISA INCLUIR A TAG IMG COM ASPAS VAZIAS PARA DAR CERTO O PICTURE -->
+        <img src=""/>
+
+    </picture>
+
+</body>
+
+</html>

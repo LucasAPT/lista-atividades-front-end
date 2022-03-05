@@ -1,0 +1,24 @@
+h1 {
+    color:darkslateblue;
+}
+
+#a1 {
+    color:darkslateblue;
+    font-size: 26px;
+}
+
+.a2 {
+    color:darkslateblue;
+    font-size:20px;
+}
+
+.a3 {
+    color:firebrick;
+    font-size:25px;
+}
+
+ol li {
+    font-size: 14px;
+    font-weight: bold;
+    color:lightcoral;
+}

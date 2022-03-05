@@ -1,0 +1,127 @@
+header, footer {
+    width: 100%;
+    height: 25px;
+    background-color: gray;
+    text-align: center;
+}
+
+footer{
+    margin-top: 130px;
+}
+
+div{
+    background-color: cadetblue;
+    width: 100%;
+    height: 200px;
+    text-align:center;
+}
+
+.quadrado1{
+    margin: 20px;
+    margin-top: 50px;
+    width: 80px;
+    height: 80px;
+
+    box-shadow: 10px 10px 5px darkgray;
+    text-shadow: 10px 10px 5px darkgray;
+    border-radius: 7px;
+
+    transition: all 1.2s linear ;
+}
+
+.quadrado1:hover{
+    margin: 65px;
+    margin-top: 50px;
+    width: calc(100% - 10%);
+    height: 80px;
+
+    box-shadow: 10px 10px 5px darkgray;
+    text-shadow: 10px 10px 5px darkgray;
+    border-radius: 7px;
+
+    background: linear-gradient(90deg, #00aabb, #a733dd, #5e0742);
+}
+
+.quadrado2{
+    margin: auto;
+    margin-top: 50px;
+    width: 80px;
+    height: 80px;
+
+    box-shadow: 10px 10px 5px darkgray;
+    text-shadow: 10px 10px 5px darkgray;
+    border-radius: 7px;
+
+    transition: all 1.2s linear;
+}
+
+.quadrado2:hover{
+    margin-top: 100px;
+    margin-bottom: 40px;
+    width: 80px;
+    height: 80px;
+
+    box-shadow: 10px 10px 5px darkgray;
+    text-shadow: 10px 10px 5px darkgray;
+    border-radius: 7px;
+
+    background: linear-gradient(180deg, #dd5a1d, #e214c6, #09a174);
+}
+
+.quadrado3{
+    margin: 20px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 80px;
+    height: 80px;
+
+    box-shadow: 10px 10px 5px darkgray;
+    text-shadow: 10px 10px 5px darkgray;
+    border-radius: 7px;
+
+    transition: all 1.2s linear;    
+}
+
+.quadrado3:hover{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 150px;
+    height: 150px;
+
+    box-shadow: 10px 10px 5px darkgray;
+    text-shadow: 10px 10px 5px darkgray;
+    border-radius: 100%;
+
+    background: linear-gradient(35deg, #5aac52, #8d0947, #511ec7);
+}
+
+/* 
+
+ESTILO DEGRADÊ
+background: linear-gradient(35deg, #00aabb, #a733dd, #dd33aa); 
+
+
+ANIMAÇÕES
+@keyframes
+
+    animation-name > nome da animação;
+    animation-delay > tempo até iniciar > delay 
+    animation-duration > duração da animação
+    animation-iteration-count: infinite > loop infinito
+
+* Para alterar o posicionamento da animação:
+- incrementar left, right... ao lado das cores
+> left blue
+> left red
+
+
+SOMBREAMENTOS
+box-shadow: 10px 10px 5px color > dimensões e cores
+text-shadow: > sombreamento no texto
+
+TRANSIÇÃO
+transition: all 2s linear; > tudo / tempo / completamente
+
+WORD-WRAP
+word-wrap: break-word; > quebra a palavra grande para caber
+*/

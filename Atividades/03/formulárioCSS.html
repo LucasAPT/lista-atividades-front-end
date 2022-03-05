@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<!--INDICA AO NAVEGADOR QUE ESTAMOS UTILIZANDO O HTML E SEUS RECURSOS-->
+
+<html>
+<!--HEAD É A CABEÇA DO CÓDIDO // ONDE FICAM AS FUNÇÕES E CONFIGURAÇÕES DO HTML-->
+
+<head>
+    <!--Meta é uma tag // charset é um atributo // utf é o tipo do teclado/idioma utilizado-->
+    <meta charset="UTF-8" />
+    <title>Formulário e CSS</title>
+    <!--COMANDO QUE CHAMA O CSS EXTERNO PARA ESTE HTML-->
+    <link rel="stylesheet" href="style.css" />
+
+</head>
+
+<!--BODY É O CORPO DO HTML-->
+
+<body>
+    <section class="corpo">
+
+
+        <!--O MECANISMO DE BUSCA DO GOOGLE PROCURA OS 'H'-->
+        <h2>CURRÍCULO</h2>
+        <!--FORMULÁRIO É EXTREMAMENTE UTILIZADO NO HTML-->
+
+        <!--DUAS COISAS NO FORM // PRA ONDE VAI // COMO VAI ENVIAR > MÉTODO > GET > POST-->
+        <!--MÉTODO GET É PASSADO NA URL // MAIS RÁPIDO-->
+        <!--MÉTODO POST É ENCAPSULADO // MAIS SEGURO-->
+        <!--ENCTYPE ENCAPSULA OS DADOS DE UPLOAD-->
+        <!--SEMPRE UTILIZA METHOD POST E ENCTYPE EM UPLOADS E COISAS QUE REQUER SEGURANÇAS-->
+        <form action="link/destino" method="POST" enctype="multipart/form-data">
+            <!--action é pra onde vai // method é como será enviado-->
+
+            <!--NOME QUE VAI DAR PRA ÁREA/ESPAÇO UTILIZADO-->
+            <!--UTILIZANDO for E id, AO CLICAR DIRECIONA PARA O CAMPO DE PREENCHIMENTO-->
+            <!--COLOCANDO O INPUT DENTRO DA LABEL NÃO PRECISA USAR O for E id-->
+
+            <fieldset>
+                <legend>DADOS PESSOAIS</legend>
+
+                <label>Nome Completo: <br />
+                    <input type="text" name="nome" required minlength="3" maxlength="100" />
+                </label>
+
+                <label>Data de Nascimento: <br />
+                    <input type="date" name="date" required max="2004-02-01" />
+                </label>
+
+                <!--VALIDAÇÃO É BOM FAZER NO FRONT END-->
+                <!--VALIDADOR pattern QUE ESTABELE O FORMATO ACEITO-->
+                <!-- pattern > alguma coisa + @ + alguma coisa + . alguma coisa -->
+                <label>Endereço: <br />
+                    <input type="text" name="endereço" />
+                </label>
+
+                <label>CEP: <br />
+                    <input text="number" name="cep" required minlength="3" maxlength="8" />
+                </label>
+
+                <label>Celular: <br />
+                    <input type="number" name="celular" />
+                </label>
+
+                <label>E-mail: <br />
+                    <input type="email" name="email" pattern="(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9_.+-]+\.[a-zA-Z0-9_.+-])"
+                        title="endereço de e-mail" />
+                </label>
+            </fieldset>
+            <br />
+            <!--LINHA QUE EU NÃO SOUBE EDITAR NO CSS-->
+
+            <fieldset>
+                <legend>DADOS ESCOLARES</legend>
+                <!--DADOS 1-->
+                <label>Nome do Curso 1: <br />
+                    <input type="text" name="curso 1" />
+                </label>
+
+                <label>Horas: <br />
+                    <input type="text" name="horas" />
+                </label>
+
+                <label>Mês/Ano de Conclusão: <br />
+                    <input type="month" name="month" required min="2015-02" />
+                </label>
+                <!--DADOS 2-->
+                <br />
+                <!--LINHA QUE EU NÃO SOUBE EDITAR NO CSS-->
+                <label>Nome do Curso 2: <br />
+                    <input type="text" name="curso 2" />
+                </label>
+
+                <label>Horas: <br />
+                    <input type="text" name="horas" />
+                </label>
+
+                <label>Mês/Ano de Conclusão: <br />
+                    <input type="month" name="month" required min="2015-02" />
+                </label>
+                <!--DADOS 3-->
+                <br />
+                <!--LINHA QUE EU NÃO SOUBE EDITAR NO CSS-->
+                <label>Nome do Curso 3: <br />
+                    <input type="text" name="curso 3" />
+                </label>
+
+                <label>Horas: <br />
+                    <input type="text" name="horas" />
+                </label>
+
+                <label>Mês/Ano de Conclusão: <br />
+                    <input type="month" name="month" required min="2015-02" />
+                </label>
+
+            </fieldset>
+
+            <br />
+            <!--LINHA QUE EU NÃO SOUBE EDITAR NO CSS-->
+            <fieldset>
+                <legend>DADOS PROFISSIONAIS</legend>
+
+                <!--DADOS 1-->
+                <label>Nome da Empresa 1: <br />
+                    <input type="text" name="empresa 1" />
+                </label>
+
+                <label>Atual? (Sim/Não): <br />
+                    <select name="Atual">
+                        <option value="N">Não</option>
+                        <option value="S" selected>Sim</option>
+                    </select>
+                </label>
+
+                <label>Tempo de Trabalho: <br />
+                    <input type="text" name="tempo" />
+                </label>
+
+                <label>Cargo: <br />
+                    <input type="text" name="cargo" required maxlength="50" />
+                </label>
+
+                <label>Descrição das atividades: <br />
+                    <textarea required maxlength="500"></textarea>
+                </label>
+                <!--DADOS 2-->
+                <br />
+                <!--LINHA QUE EU NÃO SOUBE EDITAR NO CSS-->
+
+                <label>Nome da Empresa 2: <br />
+                    <input type="text" name="empresa 2" />
+                </label>
+
+                <label>Atual? (Sim/Não): <br />
+                    <select name="Atual">
+                        <option value="N">Não</option>
+                        <option value="S" selected>Sim</option>
+                    </select>
+                </label>
+
+                <label>Tempo de Trabalho: <br />
+                    <input type="text" name="tempo" />
+                </label>
+
+                <label>Cargo: <br />
+                    <input type="text" name="cargo" required maxlength="50" />
+                </label>
+
+                <label>Descrição das atividades: <br />
+                    <textarea required maxlength="500"></textarea>
+                </label>
+                <!--DADOS 3-->
+                <br />
+                <!--LINHA QUE EU NÃO SOUBE EDITAR NO CSS-->
+                <label>Nome da Empresa 3: <br />
+                    <input type="text" name="empresa 3" />
+                </label>
+
+                <label>Atual? (Sim/Não): <br />
+                    <select name="Atual">
+                        <option value="N">Não</option>
+                        <option value="S" selected>Sim</option>
+                    </select>
+                </label>
+
+                <label>Tempo de Trabalho: <br />
+                    <input type="text" name="tempo" />
+                </label>
+
+                <label>Cargo: <br />
+                    <input type="text" name="cargo" required maxlength="50" />
+                </label>
+
+                <label>Descrição das atividades: <br />
+                    <textarea required maxlength="500"></textarea>
+                </label>
+                <br />
+                <!--LINHA QUE EU NÃO SOUBE EDITAR NO CSS-->
+                <label>
+                    Concordo em enviar meus dados.
+                    <input type="checkbox" />
+                    <button>Salvar</button>
+                </label>
+        </form>
+
+    </section>
+</body>
+
+</html>
+
+<!--
+    ATALHOS VS CODE
+    SHIFT + ALT // COPIA A LINHA PRA CIMA OU PRA BAIXO
+-->

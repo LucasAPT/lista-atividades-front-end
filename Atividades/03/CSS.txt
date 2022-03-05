@@ -1,0 +1,53 @@
+.corpo {
+    width: 600px;
+    margin: auto;
+}
+
+label {
+    display:block;
+    margin: 5px;
+}
+
+fieldset{
+    background-color: rgb(224, 228, 226);
+    border: 2px solid rgb(155, 150, 129);
+    border-radius: 5px;
+}
+
+legend{
+    background-color: rgb(175, 187, 187);
+    color: rgb(27, 10, 5);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+input [type="text"], [type="number"], [type="email"] select {
+    padding: 1px;
+    width: 200px;
+    font-size: 15px;
+    border: 1px solid rgb(30, 94, 94);
+}
+
+button {
+    padding: 2px;
+    font-size: 15px;
+    border: 1px solid rgb(30, 94, 94);
+    border-radius: 5px;
+}
+
+h2 {
+    background: rgba(222, 184, 135, 0.26);
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* 
+A label vem com display padrão inline >  display: inline;
+
+[] // esta sintaxe aplicada CSS se estende ao tipo texto // exemplo
+ input [type="text"] {
+    padding: 1px;
+    width: 200px;
+    font-size: 15px;
+    border: 1px solid rgb(30, 94, 94);
+}
