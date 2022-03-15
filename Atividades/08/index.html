@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Atividade 8</title>
+</head>
+<body>
+<div id="corpo">
+    <div class="questao">
+        <h1>Questão 01:<span>Calcular a média ponderada de 3 notas
+                    <a href="https://www.urionlinejudge.com.br/judge/pt/problems/view/1006"
+                       target="_blank">detalhar</a></span></h1>
+        <p>Resultado: A média das 3 notas foi <span id="result">xx.</span></p>
+        <label for="">Nota 01:</label>
+        <input type="text" id="nota1">
+        <label for="">Nota 02:</label>
+        <input type="text" id="nota2">
+        <label for="">Nota 03:</label>
+        <input type="text" id="nota3">
+        <input type="button" id="calcularMedia" value="Calcular">
+    </div>
+    <div class="questao">
+        <h1>Questão 02:<span> Senha Fixa <a href="https://www.urionlinejudge.com.br/judge/pt/problems/view/1114"
+                                            target="_blank">detalhar</a></span></h1>
+        <p>Resultado: <span id="correto">xxxxx</span></p>
+
+        <label for="">Digite a senha:
+            <input type="password" id="pwd">
+        </label>
+        <input type="button" onclick="validatePWD()" value="Verificar">
+
+    </div>
+    <div class="questao">
+        <h1>Questão 03:<span> Intervalo [0,25], [25,50], [50,75], [75,100] <a
+                href="https://www.urionlinejudge.com.br/judge/pt/problems/view/1037"
+                target="_blank">detalhar</a></span></h1>
+        <p>Resultado: O valor digita esta no intervalo <span id="int">xx,xx</span>.</p>
+        <label for="">Valor:
+            <input type="text" id="valor">
+        </label>
+        <input type="button" value="Verificar intervalo" id="questao3">
+    </div>
+    <div class="questao">
+        <h1>Questão 04:<span> Aumento de Salário <a
+                href="https://www.urionlinejudge.com.br/judge/pt/problems/view/1048"
+                target="_blank">detalhar</a></span></h1>
+        <p id="">Resultado: Novo salario: <span data-js="ns">xx.xx</span>, Ganho: <span data-js="gn">xx.xx</span>,
+            Percentual: <span data-js="perc">xx%</span></p>
+        <label for="">Salário atual:
+            <input type="text" id="salario">
+        </label>
+        <input type="button" value="Calcular" onclick="calcularSalario()">
+    </div>
+    <div class="questao">
+        <h1>Questão 05:<span> Imposto de Renda <a
+                href="https://www.urionlinejudge.com.br/judge/pt/problems/view/1051"
+                target="_blank">detalhar</a></span></h1>
+        <p id="">Resultado: Imposto <span id="imp">xxxxx</span></p>
+        <label for="">Renda:
+            <input type="text" id="renda">
+        </label>
+        <input type="button" value="Calcular" onclick="calcularImposto()">
+    </div>
+    <div class="questao">
+        <h1>Questão 06:<span> Calcular o salário de um funcionário <a
+                href="https://www.urionlinejudge.com.br/repository/UOJ_1008.html" target="_blank">detalhar</a></span>
+        </h1>
+        <p id="">Resultado: O funcionario <span data-js="name">xxxxxx</span> vai receber <span
+                data-js="value">xxx</span>.</p>
+        <label for="">Nome Funcionário
+            <input type="text" id="nome">
+        </label>
+        <label for="">Valor Hora
+            <input type="text" id="valorHora">
+        </label>
+        <label for="">Total de Horas Trabalhado
+            <input type="text" id="totalHoras">
+        </label>
+        <input type="button" value="Calcular" id="questao6">
+    </div>
+    <div class="questao">
+        <h1>Questão 07:<span> Calcular o consumo médio de um automóvel <a
+                href="https://www.urionlinejudge.com.br/repository/UOJ_1014.html" target="_blank">detalhar</a></span>
+        </h1>
+        <p id="">Resultado: O automóvel fez o consumo médio de <span id="consumo">xxx</span>.</p>
+        <label for="">Distância percorrida
+            <input type="text" id="distancia">
+        </label>
+        <label for="">Combustível gasto
+            <input type="text" id="gasto">
+        </label>
+        <input type="button" value="Calcular" id="questao7">
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
