@@ -1,0 +1,51 @@
+#container{
+    display: flex;
+    flex-direction: row;
+}
+
+#distancia, #gasto, #consumo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-right: 55px;
+    border-radius: 5px;
+}
+#botao{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 50px;
+    border-radius: 5px;
+    background-color: #B0E0E6;
+    border-style: outset;
+}
+#botao:active{
+    border-style: inset;
+    height: 20px;
+    background-color: #E0FFFF;
+}
+#botao:hover{
+    color: #363636;
+    cursor: pointer;
+}
+
+fieldset{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-color: rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    background-color: #FFFAFA;
+}
+
+legend{
+    text-align: center;
+}
+
+ol{
+    margin-bottom: 10px;
+}
+
+body{
+    background: linear-gradient(90deg,#F0F8FF, #F5F5F5);
+    user-select: none;
+}
