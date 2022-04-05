@@ -1,30 +1,30 @@
-// VARÍAVEL PRIMÁRIA (PESSOA)
-var persona = JSON.parse(localStorage.getItem("persona"));
-if (persona == null) {
-    persona = [];
+// VARÍAVEL PRIMÁRIA (paciente)
+var pessoa = JSON.parse(localStorage.getItem("pessoa"));
+if (pessoa == null) {
+    pessoa = [];
 }
 
-// FUNÇÃO 'SALVAR' COM VARIÁVEL 'PESSOA' E SEUS ATRIBUTOS
+// FUNÇÃO 'SALVAR' COM VARIÁVEL 'paciente' E SEUS ATRIBUTOS
 function gravar() {
-    var pessoa = {};
+    var paciente = {};
 
-    pessoa.nome = document.getElementById("nome").value.toUpperCase();
-    pessoa.status = document.getElementById("status").value;
-    pessoa.local = document.getElementById("local").value;
-    pessoa.horaInicio = document.getElementById("horaInicio").value;
-    pessoa.inicioPrevisto = document.getElementById("inicioPrevisto").value;
-    pessoa.fimPrevisto = document.getElementById("fimPrevisto").value;
-    pessoa.saidaPrevista = document.getElementById("saidaPrevista").value;
+    paciente.nome = document.getElementById("nome").value.toUpperCase();
+    paciente.status = document.getElementById("status").value;
+    paciente.local = document.getElementById("local").value;
+    paciente.horaInicio = document.getElementById("horaInicio").value;
+    paciente.inicioPrevisto = document.getElementById("inicioPrevisto").value;
+    paciente.fimPrevisto = document.getElementById("fimPrevisto").value;
+    paciente.saidaPrevista = document.getElementById("saidaPrevista").value;
 
     var id = document.getElementById("id").value;
 
     if (id == '') {
-        persona.push(pessoa);
+        pessoa.push(paciente);
     } else {
-        persona[id] = pessoa;
+        pessoa[id] = paciente;
     }
 
-    localStorage.setItem("persona", JSON.stringify(persona));
+    localStorage.setItem("pessoa", JSON.stringify(pessoa));
     atualizarTabela();
     novo();
 }
@@ -32,16 +32,16 @@ function gravar() {
 // PAINEL ONDE FICAM OS REGISTROS
 function atualizarTabela() {
     
-    var persona = JSON.parse(localStorage.getItem("persona"));
+    var pessoa = JSON.parse(localStorage.getItem("pessoa"));
     var corpoTabela = "";
-    for (i in persona) {
+    for (i in pessoa) {
         corpoTabela += `<tr onclick="editar(${i})">`;
-        corpoTabela += `<td>${persona[i].nome}</td>`;
-        corpoTabela += colunaStatus(persona[i].status, persona[i].local);
-        corpoTabela += `<td>${persona[i].horaInicio}</td>`;
-        corpoTabela += `<td>${persona[i].inicioPrevisto}</td>`;
-        corpoTabela += `<td>${persona[i].fimPrevisto}</td>`;
-        corpoTabela += `<td>${persona[i].saidaPrevista}</td>`;
+        corpoTabela += `<td>${pessoa[i].nome}</td>`;
+        corpoTabela += colunaStatus(pessoa[i].status, pessoa[i].local);
+        corpoTabela += `<td>${pessoa[i].horaInicio}</td>`;
+        corpoTabela += `<td>${pessoa[i].inicioPrevisto}</td>`;
+        corpoTabela += `<td>${pessoa[i].fimPrevisto}</td>`;
+        corpoTabela += `<td>${pessoa[i].saidaPrevista}</td>`;
         corpoTabela += `</tr>`;
     }
     // MOSTRA OS DADOS
@@ -81,13 +81,13 @@ function colunaStatus(status, local) {
 
 // FUNÇÃO EMBUTIDA -- QUANDO O USUÁRIO SELECIONAR ALGUM REGISTRO PERMITIRÁ EDITAR
 function editar(id) {
-    document.getElementById('nome').value = persona[id].nome;
-    document.getElementById("status").value = persona[id].status;
-    document.getElementById("local").value = persona[id].local;
-    document.getElementById("horaInicio").value = persona[id].horaInicio;
-    document.getElementById("inicioPrevisto").value = persona[id].inicioPrevisto;
-    document.getElementById("fimPrevisto").value = persona[id].fimPrevisto;
-    document.getElementById("saidaPrevista").value = persona[id].saidaPrevista;
+    document.getElementById('nome').value = pessoa[id].nome;
+    document.getElementById("status").value = pessoa[id].status;
+    document.getElementById("local").value = pessoa[id].local;
+    document.getElementById("horaInicio").value = pessoa[id].horaInicio;
+    document.getElementById("inicioPrevisto").value = pessoa[id].inicioPrevisto;
+    document.getElementById("fimPrevisto").value = pessoa[id].fimPrevisto;
+    document.getElementById("saidaPrevista").value = pessoa[id].saidaPrevista;
     document.getElementById("id").value = id;
 }
 
@@ -98,8 +98,8 @@ function apagar() {
         return;
     }
     if (confirm("Você realmente deseja apagar esse registro?")) {
-        persona.splice(id, 1);
-        localStorage.setItem("persona", JSON.stringify(persona));
+        pessoa.splice(id, 1);
+        localStorage.setItem("pessoa", JSON.stringify(pessoa));
         atualizarTabela();
         novo();
     }
