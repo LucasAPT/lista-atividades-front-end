@@ -4,63 +4,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Painel Centro Cirúrgico</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <style>
-        tbody {
-            cursor: pointer;
-        }
-    </style>
+    <title>Painel do Centro Cirúrgico</title>
+    <!--LINK DO BOOTSTRAP > https://getbootstrap.com.br/ -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
+    
 </head>
 
 <body>
     <div class="container">
-        <h1>Painel Centro Cirúrgico</h1>
+        <h1 class = "text-center bg-light">Painel do Centro Cirúrgico</h1>
         <form id="formulario">
 
             <div class="row">
                 <div class="form-group col-sm-6">
-                    <label for="nome">Nome do Paciente:</label>
-                    <input class="form-control" type="text" id="nome" name="nome" autocomplete="off">
+                    <label class = "font-weight-bold" for="nome">Nome do Paciente:</label>
+                    <input class="form-control" type="text" id="nome" name="nome" autocomplete="off" placeholder="Nome Completo">
                 </div>
                 <div class="form-group col-sm-3">
-                    <label for="status">Status:</label>
+                    <label class = "font-weight-bold" for="status">Status:</label>
                     <select class="form-control" id="status" name="status">
                         <option value="operatorio">Pré Operatório</option>
-                        <option value="sala-cirurgia">Em sala de Cirurgia</option>
+                        <option value="sala-cirurgia">Sala de Cirurgia</option>
                         <option value="recuperacao">Sala de Recuperação</option>
                         <option value="transferido">Transferido</option>
                     </select>
                 </div>
                 <div class="form-group col-sm-3">
-                    <label for="local">Local:</label>
-                    <input class="form-control" type="text" id="local" name="local">
+                    <label class = "font-weight-bold" for="local">Local:</label>
+                    <input class="form-control" type="text" id="local" name="local" placeholder="Sala do Procedimento">
                 </div>
             </div>
             <div class="row">
                 <div class="form-group col-sm-3">
-                    <label for="horaInicio">Hora Início:</label>
+                    <label class = "font-weight-bold" for="horaInicio">Hora Início:</label>
                     <input class="form-control" type="time" id="horaInicio" name="horaInicio">
                 </div>
                 <div class="form-group col-sm-3">
-                    <label for="inicioPrevisto">Início Previsto:</label>
+                    <label class = "font-weight-bold" for="inicioPrevisto">Início Previsto:</label>
                     <input class="form-control" type="time" id="inicioPrevisto" name="inicioPrevisto">
                 </div>
                 <div class="form-group col-sm-3">
-                    <label for="fimPrevisto">Fim Previsto:</label>
+                    <label class = "font-weight-bold" for="fimPrevisto">Fim Previsto:</label>
                     <input class="form-control" type="time" id="fimPrevisto" name="fimPrevisto">
                 </div>
                 <div class="form-group col-sm-3">
-                    <label for="saidaPrevista">Saída Prevista:</label>
+                    <label class = "font-weight-bold" for="saidaPrevista">Saída Prevista:</label>
                     <input class="form-control" type="time" id="saidaPrevista" name="saidaPrevista">
                 </div>
             </div>
             <div class="row">
                 <div class="col">
                     <button type="button" class="btn btn-secondary" onclick="novo()">Novo</button>
-                    <button type="button" class="btn btn-primary" onclick="gavar()">Gravar</button>
-                    <button type="button" class="btn btn-danger" onclick="apagar()">Apagar</button>
+                    <button type="button" class="btn btn-primary" onclick="gravar()">Confirmar</button>
+                    <button type="button" class="btn btn-danger" onclick="apagar()">Remover</button>
                     <input class="" type="hidden" id="id" name="id" autocomplete="off">
                 </div>
             </div>
@@ -79,7 +76,13 @@
             </tbody>
         </table>
     </div>
+    
     <script src="js/srcipt.js"></script>
+
+    <!--ESTILO-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </body>
 
 </html>

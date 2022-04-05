@@ -1,9 +1,11 @@
-var lsPessoa = JSON.parse(localStorage.getItem("lsPessoa"));
-if (lsPessoa == null) {
-    lsPessoa = [];
+// VARÍAVEL ALFA (PESSOA)
+var alma = JSON.parse(localStorage.getItem("alma"));
+if (alma == null) {
+    alma = [];
 }
 
-function gavar() {
+// FUNÇÃO 'SALVAR' COM VARIÁVEL 'PESSOA' E SEUS ATRIBUTOS
+function gravar() {
     var pessoa = {};
 
     pessoa.nome = document.getElementById("nome").value.toUpperCase();
@@ -17,34 +19,36 @@ function gavar() {
     var id = document.getElementById("id").value;
 
     if (id == '') {
-        lsPessoa.push(pessoa);
+        alma.push(pessoa);
     } else {
-        lsPessoa[id] = pessoa;
+        alma[id] = pessoa;
     }
 
-    localStorage.setItem("lsPessoa", JSON.stringify(lsPessoa));
+    localStorage.setItem("alma", JSON.stringify(alma));
     atualizarTabela();
     novo();
 }
 
+// PAINEL ONDE FICAM OS REGISTROS
 function atualizarTabela() {
-    // console.log("atualizarTabela");
-    var lsPessoa = JSON.parse(localStorage.getItem("lsPessoa"));
+    
+    var alma = JSON.parse(localStorage.getItem("alma"));
     var corpoTabela = "";
-    for (i in lsPessoa) {
+    for (i in alma) {
         corpoTabela += `<tr onclick="editar(${i})">`;
-        corpoTabela += `<td>${lsPessoa[i].nome}</td>`;
-        corpoTabela += colunaStatus(lsPessoa[i].status, lsPessoa[i].local);
-        corpoTabela += `<td>${lsPessoa[i].horaInicio}</td>`;
-        corpoTabela += `<td>${lsPessoa[i].inicioPrevisto}</td>`;
-        corpoTabela += `<td>${lsPessoa[i].fimPrevisto}</td>`;
-        corpoTabela += `<td>${lsPessoa[i].saidaPrevista}</td>`;
+        corpoTabela += `<td>${alma[i].nome}</td>`;
+        corpoTabela += colunaStatus(alma[i].status, alma[i].local);
+        corpoTabela += `<td>${alma[i].horaInicio}</td>`;
+        corpoTabela += `<td>${alma[i].inicioPrevisto}</td>`;
+        corpoTabela += `<td>${alma[i].fimPrevisto}</td>`;
+        corpoTabela += `<td>${alma[i].saidaPrevista}</td>`;
         corpoTabela += `</tr>`;
     }
-    // console.log(corpoTabela);
+    // MOSTRA OS DADOS
     document.getElementById("corpoTabela").innerHTML = corpoTabela;
 }
 
+// COLUNA STATUS E LOCAL REFERENTE AO PACIENTE
 function colunaStatus(status, local) {
     var retorno = "<td &class>&status &local</td>";
     local = (local == "") ? "" : `(${local})`;
@@ -57,7 +61,7 @@ function colunaStatus(status, local) {
         }
         case "sala-cirurgia": {
             retorno = retorno.replace("&class", "class='table-danger'")
-                .replace("&status", "Em sala de Cirurgia");
+                .replace("&status", "Sala de Cirurgia");
             break;
         }
         case "recuperacao": {
@@ -67,7 +71,7 @@ function colunaStatus(status, local) {
         }
         case "transferido": {
             retorno = retorno.replace("&class", "class='table-primary'")
-                .replace("&status", "Trensferído");
+                .replace("&status", "Transferido");
             break;
         }
     }
@@ -75,42 +79,37 @@ function colunaStatus(status, local) {
 }
 
 
-
+// FUNÇÃO EMBUTIDA -- QUANDO O USUÁRIO SELECIONAR ALGUM REGISTRO PERMITIRÁ EDITAR
 function editar(id) {
-    document.getElementById('nome').value = lsPessoa[id].nome;
-    document.getElementById("status").value = lsPessoa[id].status;
-    document.getElementById("local").value = lsPessoa[id].local;
-    document.getElementById("horaInicio").value = lsPessoa[id].horaInicio;
-    document.getElementById("inicioPrevisto").value = lsPessoa[id].inicioPrevisto;
-    document.getElementById("fimPrevisto").value = lsPessoa[id].fimPrevisto;
-    document.getElementById("saidaPrevista").value = lsPessoa[id].saidaPrevista;
+    document.getElementById('nome').value = alma[id].nome;
+    document.getElementById("status").value = alma[id].status;
+    document.getElementById("local").value = alma[id].local;
+    document.getElementById("horaInicio").value = alma[id].horaInicio;
+    document.getElementById("inicioPrevisto").value = alma[id].inicioPrevisto;
+    document.getElementById("fimPrevisto").value = alma[id].fimPrevisto;
+    document.getElementById("saidaPrevista").value = alma[id].saidaPrevista;
     document.getElementById("id").value = id;
 }
 
+// FUNÇÃO APAGAR -- EXCLUIRÁ REGISTRO -- PRECISA ATRELAR AO BOTÃO NO HTML
 function apagar() {
     var id = document.getElementById("id").value;
     if (id == '') {
         return;
     }
     if (confirm("Você realmente deseja apagar esse registro?")) {
-        lsPessoa.splice(id, 1);
-        localStorage.setItem("lsPessoa", JSON.stringify(lsPessoa));
+        alma.splice(id, 1);
+        localStorage.setItem("alma", JSON.stringify(alma));
         atualizarTabela();
         novo();
     }
 }
 
+// FUNÇÃO NOVO -- ADICIONARÁ REGISTRO -- PRECISA ATRELAR AO BOTÃO NO HTML
 function novo() {
     document.getElementById("formulario").reset();
     document.getElementById("id").value = "";
 }
 
+// CHAMAR FUNÇÃO
 atualizarTabela();
-
-
-    // status
-    // local
-    // horaInicio
-    // inicioPrevisto
-    // fimPrevisto
-    // saidaPrevista
