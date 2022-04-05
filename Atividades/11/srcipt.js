@@ -1,7 +1,7 @@
-// VARÍAVEL ALFA (PESSOA)
-var alma = JSON.parse(localStorage.getItem("alma"));
-if (alma == null) {
-    alma = [];
+// VARÍAVEL PRIMÁRIA (PESSOA)
+var persona = JSON.parse(localStorage.getItem("persona"));
+if (persona == null) {
+    persona = [];
 }
 
 // FUNÇÃO 'SALVAR' COM VARIÁVEL 'PESSOA' E SEUS ATRIBUTOS
@@ -19,12 +19,12 @@ function gravar() {
     var id = document.getElementById("id").value;
 
     if (id == '') {
-        alma.push(pessoa);
+        persona.push(pessoa);
     } else {
-        alma[id] = pessoa;
+        persona[id] = pessoa;
     }
 
-    localStorage.setItem("alma", JSON.stringify(alma));
+    localStorage.setItem("persona", JSON.stringify(persona));
     atualizarTabela();
     novo();
 }
@@ -32,16 +32,16 @@ function gravar() {
 // PAINEL ONDE FICAM OS REGISTROS
 function atualizarTabela() {
     
-    var alma = JSON.parse(localStorage.getItem("alma"));
+    var persona = JSON.parse(localStorage.getItem("persona"));
     var corpoTabela = "";
-    for (i in alma) {
+    for (i in persona) {
         corpoTabela += `<tr onclick="editar(${i})">`;
-        corpoTabela += `<td>${alma[i].nome}</td>`;
-        corpoTabela += colunaStatus(alma[i].status, alma[i].local);
-        corpoTabela += `<td>${alma[i].horaInicio}</td>`;
-        corpoTabela += `<td>${alma[i].inicioPrevisto}</td>`;
-        corpoTabela += `<td>${alma[i].fimPrevisto}</td>`;
-        corpoTabela += `<td>${alma[i].saidaPrevista}</td>`;
+        corpoTabela += `<td>${persona[i].nome}</td>`;
+        corpoTabela += colunaStatus(persona[i].status, persona[i].local);
+        corpoTabela += `<td>${persona[i].horaInicio}</td>`;
+        corpoTabela += `<td>${persona[i].inicioPrevisto}</td>`;
+        corpoTabela += `<td>${persona[i].fimPrevisto}</td>`;
+        corpoTabela += `<td>${persona[i].saidaPrevista}</td>`;
         corpoTabela += `</tr>`;
     }
     // MOSTRA OS DADOS
@@ -81,13 +81,13 @@ function colunaStatus(status, local) {
 
 // FUNÇÃO EMBUTIDA -- QUANDO O USUÁRIO SELECIONAR ALGUM REGISTRO PERMITIRÁ EDITAR
 function editar(id) {
-    document.getElementById('nome').value = alma[id].nome;
-    document.getElementById("status").value = alma[id].status;
-    document.getElementById("local").value = alma[id].local;
-    document.getElementById("horaInicio").value = alma[id].horaInicio;
-    document.getElementById("inicioPrevisto").value = alma[id].inicioPrevisto;
-    document.getElementById("fimPrevisto").value = alma[id].fimPrevisto;
-    document.getElementById("saidaPrevista").value = alma[id].saidaPrevista;
+    document.getElementById('nome').value = persona[id].nome;
+    document.getElementById("status").value = persona[id].status;
+    document.getElementById("local").value = persona[id].local;
+    document.getElementById("horaInicio").value = persona[id].horaInicio;
+    document.getElementById("inicioPrevisto").value = persona[id].inicioPrevisto;
+    document.getElementById("fimPrevisto").value = persona[id].fimPrevisto;
+    document.getElementById("saidaPrevista").value = persona[id].saidaPrevista;
     document.getElementById("id").value = id;
 }
 
@@ -98,8 +98,8 @@ function apagar() {
         return;
     }
     if (confirm("Você realmente deseja apagar esse registro?")) {
-        alma.splice(id, 1);
-        localStorage.setItem("alma", JSON.stringify(alma));
+        persona.splice(id, 1);
+        localStorage.setItem("persona", JSON.stringify(persona));
         atualizarTabela();
         novo();
     }
