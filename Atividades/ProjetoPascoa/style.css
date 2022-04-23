@@ -1,0 +1,227 @@
+*{
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Fira Sans";
+}
+
+header{
+    margin: 0 auto;
+}
+
+main{
+    background-color: #A9A9A9;
+}
+
+.favorito-btn, .usuario-btn, .carrinho-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #A9A9A9;
+}
+.favorito-btn:hover, .carrinho-btn:hover{
+    cursor: pointer;
+    user-select: none;
+}
+.usuario-btn{
+    user-select: none;
+}
+
+.menuH{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    list-style-type: none;
+    padding: 0;
+    color: #fff;
+}
+
+.menuH ul{
+    display:flex;
+    padding: 10px;
+}
+
+.menuH li{
+    padding: 10px;
+}
+
+.menuH li input{
+    padding: 10px;
+    height: 40px;
+}
+
+.favorito, .login, .carrinho{
+    width: 50px;
+    height: 50px;
+}
+
+.buscador{
+    height: 30px;
+    width: 300px;
+    border-radius: 5px;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    background-color: #770a0a;
+}
+
+nav h1{
+    font-size: 25px;
+    font-weight: bold;
+}
+nav h5 {
+    margin-top: 0;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.container img{
+    margin-top: 10px;
+    max-width:150px;
+    height: 150px;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.item{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.item .produto{
+    margin: 40px;
+    text-align: center;
+    border-radius: 35px;
+    background-color: #fff;
+    border: none;
+    max-width: 260px;
+}
+
+.quantidade{
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    user-select: none;
+}
+
+.quantidade input{
+    outline: none;
+    background: none;
+    border: none;
+    text-decoration: none;
+}
+.quantidade div{
+    display:inline;
+}
+.quantidadeNumero{
+    margin-left: 50px;
+    margin-right: 50px;
+}
+/*botão de compra*/
+.comprar{
+    height: 30px;
+    width: 110px;
+    background-color: #006400;
+    color: #fff;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    padding: 5px;
+    outline: none;
+    border: 2px;
+    border-color: #2F4F4F;
+    border-style: outset;
+}
+
+.comprar:hover{
+    cursor: pointer;
+}
+.comprar:active{
+    color: #00FA9A;
+    width: 106px;
+    height: 29px;
+    border-style: inset;
+}
+
+.tituloProduto{
+    margin: 10px;    
+    font-size: 25px;
+    width: 240px;
+    
+    word-wrap: break-word;
+}
+
+.descricaoProduto{
+    word-wrap: break-word;
+    margin: 10px;
+}
+
+.precoProduto{
+    font-weight: bold;
+    font-size: 25px;
+    color: 	#228B22;
+}
+
+.menos, .mais{
+    font-size: 20px;  
+}
+.menos:hover, .mais:hover{
+    cursor: pointer;
+}
+.menos:active, .mais:active{
+    color: 	#228B22;
+    font-weight: bold;
+}
+.logar:hover{
+    text-decoration: underline;
+    cursor: pointer;
+
+}
+.modal-content{
+    color: #000;
+    word-wrap: break-word;
+}
+
+.modal .form-inline input{
+    float:left;
+}
+
+.modal .form-inline{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.footerContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.rodape{
+    background-color: #770a0a;
+    color: #fff;
+    text-align: center;
+}
+
+.footerItem{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    word-wrap: break-word;
+}

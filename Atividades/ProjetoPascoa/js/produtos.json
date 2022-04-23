@@ -1,0 +1,44 @@
+[
+    { 
+        "nome": "Oreo",
+        "descricao": "O melhor do Oreo em um ovo de colher",
+        "valor": 100,
+        "quantidade": 0,
+        "img": "img/oreo.webp"
+    },
+    {
+        "nome": "Prestígio",
+        "descricao": "O melhor do Prestígio em um ovo de colher",
+        "valor": 100,
+        "quantidade": 0,
+        "img": "img/prestigio.webp"
+    },
+    {
+        "nome": "Sonho de Valsa",
+        "descricao": "O melhor do Sonho de Valsa em um ovo de colher",
+        "valor": 100,
+        "quantidade": 0,
+        "img": "img/sonhodevalsa.webp"
+    },
+    {
+        "nome": "Cesta de Bombons",
+        "descricao": "18 bombons de sabor variado",
+        "valor": 100,
+        "quantidade": 0,
+        "img": "img/cesta.jpg"
+    },
+    {
+        "nome": "Chocolate com Pimenta",
+        "descricao": "Uma deliciosa mistura de chocolate com pimenta",
+        "valor": 100,
+        "quantidade": 0,
+        "img": "img/chocolatepimenta.jpg"
+    },
+    {
+        "nome": "Surpresa",
+        "descricao": "Este item irá te surpreender",
+        "valor": "0",
+        "quantidade": 0,
+        "img": "img/surpresa.jpg"
+    }
+]

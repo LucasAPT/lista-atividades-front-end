@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+    <html lang="pt-br">
+        <head>
+            <!-- PADRÕES DA LÍNGUA PORTUGUESA -->
+            <meta charset="utf-8"/>
+            <!-- COMPATIBILIDADE E RESPONSIVIDADE -->
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Site de doces</title>
+
+            <link rel="stylesheet" href="style.css"/>
+            <!-- EXPORTA FONTES E BOOTSTRAP -->
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500&display=swap" rel="stylesheet">
+            
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+            
+        </head>
+        <!-- CORPO DO SITE -->
+        <body>
+            <header>
+                <div class="header">
+                    <nav>
+                        <ul class="menuH">
+                            <li id="logo">
+                                <h1>Chocolat</h1>
+                                <h5>Sua vida mais doce</h5>
+                            </li>
+                            <li><input type="text" placeholder="O que você procura?🔎" class="buscador"/></li>
+                            <li>
+                                <div class="carrinho-btn" data-toggle="modal" data-target="#myModal" onclick="mostrarPedidos()">
+                                    <img class="carrinho" src="img/carrinho.png" />
+                                </div>
+                            </li>
+                            <li>
+                                <h>Carrinho <br/><span class="carroQtd">0</span> itens</h>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+            <main>
+                <div class="container">
+                    <div class="item">
+                        <fieldset class="produto">
+                            <img src="img/surpresa.jpg" class="produtoImg" alt=""/>
+                            <div class="tituloProduto">Surpresa</div>
+                            <div class="descricaoProduto">Isto vai te surpreender</div>
+                            <div class="precoProduto">Grátis</div>
+                            
+                                <fieldset class="quantidade">
+                                    <input type="button" value="-" class="menos"/>
+                                    <div class="quantidadeNumero">0</div>
+                                    <input type="button" value="+" class="mais"/>
+                                </fieldset>
+                            <!--<input type="button" value="COMPRAR" class="comprar"/>-->
+                        </fieldset>
+                    </div>
+                </div>
+
+                <!-- Modal -->
+                <div class="modal fade" id="myModal" role="dialog">
+                    <div class="modal-dialog">
+                    
+                      <!-- Modal conteúdo-->
+                      <div class="modal-content #modalBg">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                          <h4 class="modal-title">Informações do pedido</h4>
+                        </div>
+                        <div class="modal-body">
+                          
+                        </div>
+                        <div class="modal-footer form-inline d-flex">
+                            <div class="usuario-btn">
+                                <img class="login" src="img/login.png"/>
+                            </div>
+                            <input type="text" name="nome" id="nome" placeholder="Digite seu nome" class="form-control"/>
+                            <input type="text" name="endereco" id="endereco" placeholder="Digite seu endereço" class="form-control"/>
+                            <button type="button" class="comprar" onclick="enviar()" disabled id="btEnviar">Enviar</button>
+                        </div>
+                      </div>
+                      
+                    </div>
+                  </div>
+            </main>
+            <!-- RODAPÉ DO SITE -->
+            <footer>
+                <div class="rodape">
+                    <div class="footerContainer">
+                        <div class="footerItem">
+                            <div>Atendimento</div>
+                            <div>4002-8922</div>
+                        </div>
+                        <div class="footerItem">
+                            <div>Chocolate LTDA / CNPJ: 00.000.000/0000-00/</div>
+                            <div>Endereço: Rua Faz de Contas, 102. Bairro Vale do Rio Doce.</div>
+                        </div>
+                        <div class="footerItem">
+                            <div>Agradecemos a preferência</div>
+                            <div>Volte sempre</div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <script src="js/script.js"></script>
+        </body>
+    </html>
